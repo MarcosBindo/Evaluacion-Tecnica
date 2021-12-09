@@ -1,8 +1,5 @@
 package com.challenge.nubi;
 
-
-import java.io.FileWriter;
-import java.io.IOException;
 import java.sql.Date;
 
 import com.challenge.nubi.models.Encuesta;
@@ -24,7 +21,16 @@ public class NubiApplication {
 		p1.agregarRespuestas("opcion 1");
 		p1.agregarRespuestas("opcion 2");
 		p1.agregarRespuestas("opcion 3");
+		p1.agregarRespuestas("opcion 4");
 
+		Pregunta p2 = new Pregunta("Pregunta 2");
+		encuesta.agregarPregunta(p2);
+		p2.agregarRespuestas("opcion 1");
+		p2.agregarRespuestas("opcion 2");
+		p2.agregarRespuestas("opcion 3");
+		p2.agregarRespuestas("opcion 4");
+
+		System.out.println(encuesta);
 
 	}
 	

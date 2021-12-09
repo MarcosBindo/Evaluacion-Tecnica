@@ -9,6 +9,7 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
+
 public class Pregunta {
     private String pregunta;
     private ArrayList<String> respuestas;
@@ -19,7 +20,7 @@ public class Pregunta {
     }
 
     public void agregarRespuestas(String respuesta) {
-        if (respuestas.size() > 0 && respuestas.size() <= 4) {
+        if (respuestas.size() >= 0 && respuestas.size() < 4) {
             this.respuestas.add(respuesta);
         } else {
             switch (respuestas.size()) {
@@ -33,9 +34,9 @@ public class Pregunta {
         }
     }
 
-    public void mostrarRespuestas(){
+    public void mostrarRespuestas() {
         for (int i = 0; i < respuestas.size(); i++) {
-            System.out.println( "-" + respuestas.get(i) + "/n");
+            System.out.println("-" + respuestas.get(i) + "/n");
         }
     }
 
