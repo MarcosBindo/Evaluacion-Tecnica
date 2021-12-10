@@ -2,6 +2,7 @@ package com.challenge.nubi;
 
 import java.sql.Date;
 
+import com.challenge.handler.manipuladorJSON;
 import com.challenge.nubi.models.Encuesta;
 import com.challenge.nubi.models.Pregunta;
 
@@ -32,6 +33,9 @@ public class NubiApplication {
 
 		System.out.println(encuesta);
 
+		manipuladorJSON.agregarEncuesta(encuesta);
+
+		
 	}
 	
 }
