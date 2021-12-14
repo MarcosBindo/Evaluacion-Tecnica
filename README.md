@@ -1,47 +1,47 @@
 # evaluacion-tecnica
-El codigo unicamente funciona mockeado. Si se quieren realizar cambios en su ejecucion hay que descargarlo
+El codigo unicamente funciona mockeado / estatico. Si se quieren realizar cambios en su ejecucion hay que descargarlo
 y modificar el main.
 (Yo deje codigo para que se pueda solamente ejecutar y muestre todas las funciones que tiene el sistema)
 
 ## Codigo del main
 ```java
-    //Crear un usuario
-		Usuario user = new Usuario("marcos", "1234");
-		user.registrarse();
+	//Crear un usuario
+	Usuario user = new Usuario("marcos", "1234");
+	user.registrarse();
 
-		//Crea una encuesta con etiqueta
-		Encuesta encuesta1 = new Encuesta("Encuesta de prueba 1", "etiqueta", new Date(122, 03, 15));
-		Encuesta encuesta2 = new Encuesta("Encuesta de prueba 2", "prueba1", new Date(122, 03, 15));
-		
-		//Crea una encuesta sin etiqueta
-		Encuesta encuesta3 = new Encuesta("Encuesta de prueba 3", new Date(122, 02, 03));
-	
-		//Crea una pregunta
-		Pregunta p1 = new Pregunta("Pregunta 1");
-		//Metodo para agregar la pregunta con sus opciones a la encuesta deseada
-		user.agregarPregunta(encuesta1,p1);
-		//Agrega las opciones de respuesta a la pregunta
-		user.cargarRespuestas(p1,"opcion 1");
-		user.cargarRespuestas(p1,"opcion 2");
-		user.cargarRespuestas(p1,"opcion 3");
-		user.cargarRespuestas(p1,"opcion 4");
+	//Crea una encuesta con etiqueta
+	Encuesta encuesta1 = new Encuesta("Encuesta de prueba 1", "etiqueta", new Date(122, 03, 15));
+	Encuesta encuesta2 = new Encuesta("Encuesta de prueba 2", "prueba1", new Date(122, 03, 15));
 
-		Pregunta p2 = new Pregunta("Pregunta 2");
-		user.agregarPregunta(encuesta2,p2);
-		user.cargarRespuestas(p2,"opcion 1");
-		user.cargarRespuestas(p2,"opcion 2");
-		user.cargarRespuestas(p2,"opcion 3");
-		
-		//Metodo para poder agregar las encuestas al json
-		user.agregarEncuesta(encuesta1);
-		user.agregarEncuesta(encuesta2);
-		user.agregarEncuesta(encuesta3);
+	//Crea una encuesta sin etiqueta
+	Encuesta encuesta3 = new Encuesta("Encuesta de prueba 3", new Date(122, 02, 03));
 
-		//Metodo que busca e imprime todas las encuestas que contenga el string ingresado
-		manipuladorJSON.buscarPorEtiqueta("etiqueta");
+	//Crea una pregunta
+	Pregunta p1 = new Pregunta("Pregunta 1");
+	//Metodo para agregar la pregunta con sus opciones a la encuesta deseada
+	user.agregarPregunta(encuesta1,p1);
+	//Agrega las opciones de respuesta a la pregunta
+	user.cargarRespuestas(p1,"opcion 1");
+	user.cargarRespuestas(p1,"opcion 2");
+	user.cargarRespuestas(p1,"opcion 3");
+	user.cargarRespuestas(p1,"opcion 4");
 
-		//Metodo para mostrar por pantalla todas las encuestas almacenadas en el archivo 
-		manipuladorJSON.obtenerEncuestas();
+	Pregunta p2 = new Pregunta("Pregunta 2");
+	user.agregarPregunta(encuesta2,p2);
+	user.cargarRespuestas(p2,"opcion 1");
+	user.cargarRespuestas(p2,"opcion 2");
+	user.cargarRespuestas(p2,"opcion 3");
+
+	//Metodo para poder agregar las encuestas al json
+	user.agregarEncuesta(encuesta1);
+	user.agregarEncuesta(encuesta2);
+	user.agregarEncuesta(encuesta3);
+
+	//Metodo que busca e imprime todas las encuestas que contenga el string ingresado
+	manipuladorJSON.buscarPorEtiqueta("etiqueta");
+
+	//Metodo para mostrar por pantalla todas las encuestas almacenadas en el archivo 
+	manipuladorJSON.obtenerEncuestas();
 ```
 
 ## Como ejecutarlo?
