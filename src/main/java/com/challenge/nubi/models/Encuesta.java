@@ -36,7 +36,7 @@ public class Encuesta {
         this.preguntas = new ArrayList<Pregunta>();
     }
 
-    public void agregarPregunta(Pregunta pregunta) {
+    protected void agregarPregunta(Pregunta pregunta) {
         this.preguntas.add(pregunta);
     }
 

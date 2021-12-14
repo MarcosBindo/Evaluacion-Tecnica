@@ -19,7 +19,7 @@ public class Pregunta {
         this.respuestas = new ArrayList<String>();
     }
 
-    public void agregarRespuestas(String respuesta) {
+    protected void agregarRespuestas(String respuesta) {
         if (respuestas.size() >= 0 && respuestas.size() < 4) {
             this.respuestas.add(respuesta);
         } else {

@@ -12,7 +12,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 @SuppressWarnings("unchecked")
-public class manipuladorJSON{
+public class manipuladorJSON {
     private static String path = "bd.json";
     private static JSONObject mainJson = new JSONObject();
     private static JSONObject encuestas = new JSONObject();
@@ -28,7 +28,7 @@ public class manipuladorJSON{
         for (String opciones : pregunta.getRespuestas()) {
             respuestas.add(opciones);
         }
-        
+
         return preguntaData;
     }
 
@@ -41,7 +41,7 @@ public class manipuladorJSON{
         encuestaData.put("Etiqueta", encuesta.getEtiqueta());
 
         for (Pregunta pregunta : encuesta.getPreguntas()) {
-            preguntas.put(pregunta.getPregunta(),agregarPregunta(pregunta));
+            preguntas.put(pregunta.getPregunta(), agregarPregunta(pregunta));
         }
 
         encuestas.put(encuesta.getNEncuesta(), encuestaData);
@@ -67,7 +67,6 @@ public class manipuladorJSON{
         } else {
             System.out.println(encuestasTemp);
         }
-
     }
 
     // Metodo publico para poder obtener un listado de todas las encuestas del
@@ -75,14 +74,17 @@ public class manipuladorJSON{
     public static void obtenerEncuestas() {
         leerJSON();
 
-        for (int i = 1; i <= encuestas.size(); i++) {
-            JSONObject encuesta = (JSONObject) encuestas.get(String.valueOf(i));
-
-            System.out.println("<--Comienzo de encuesta " + i + " -->");
-            printEncuesta(encuesta);
-            System.out.println("<--Fin de encuesta " + i + " --> \n");
-
+        if (encuestas.size() > 0) {
+            for (int i = 1; i <= encuestas.size(); i++) {
+                JSONObject encuesta = (JSONObject) encuestas.get(String.valueOf(i));
+                System.out.println("<--Comienzo de encuesta " + i + " -->");
+                printEncuesta(encuesta);
+                System.out.println("<--Fin de encuesta " + i + " --> \n");
+            }
+        }else{
+            System.out.println("No hay encuestas almacenadas en el sistema");
         }
+
     }
 
     // Metodo que escribe un archivo json

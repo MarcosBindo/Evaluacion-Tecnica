@@ -18,6 +18,7 @@ public class NubiApplication {
 
 		//Crear un usuario
 		Usuario user = new Usuario("marcos", "1234");
+		user.registrarse();
 
 		//Crea una encuesta con etiqueta
 		Encuesta encuesta1 = new Encuesta("Encuesta de prueba 1", "etiqueta", new Date(122, 03, 15));
@@ -29,18 +30,18 @@ public class NubiApplication {
 		//Crea una pregunta
 		Pregunta p1 = new Pregunta("Pregunta 1");
 		//Metodo para agregar la pregunta con sus opciones a la encuesta deseada
-		encuesta1.agregarPregunta(p1);
+		user.agregarPregunta(encuesta1,p1);
 		//Agrega las opciones de respuesta a la pregunta
-		p1.agregarRespuestas("opcion 1");
-		p1.agregarRespuestas("opcion 2");
-		p1.agregarRespuestas("opcion 3");
-		p1.agregarRespuestas("opcion 4");
+		user.cargarRespuestas(p1,"opcion 1");
+		user.cargarRespuestas(p1,"opcion 2");
+		user.cargarRespuestas(p1,"opcion 3");
+		user.cargarRespuestas(p1,"opcion 4");
 
 		Pregunta p2 = new Pregunta("Pregunta 2");
-		encuesta2.agregarPregunta(p2);
-		p2.agregarRespuestas("opcion 1");
-		p2.agregarRespuestas("opcion 2");
-		p2.agregarRespuestas("opcion 3");
+		user.agregarPregunta(encuesta2,p2);
+		user.cargarRespuestas(p2,"opcion 1");
+		user.cargarRespuestas(p2,"opcion 2");
+		user.cargarRespuestas(p2,"opcion 3");
 		
 		//Metodo para poder agregar las encuestas al json
 		user.agregarEncuesta(encuesta1);
@@ -52,6 +53,8 @@ public class NubiApplication {
 
 		//Metodo para mostrar por pantalla todas las encuestas almacenadas en el archivo 
 		manipuladorJSON.obtenerEncuestas();
+		
+		System.out.println(user);
 	}
 
 }
