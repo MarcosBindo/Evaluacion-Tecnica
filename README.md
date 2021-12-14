@@ -65,6 +65,6 @@ java -jar .\nubi-0.0.1-SNAPSHOT.war
 
 ### Cosas que estan frenadas: 
  - Debe estar dockerizado (Esto es debido a que la maquina virtual que estaba utilizando no estaba corriendo, intente en mi windows pero tambien habia errores gracias al kernel
- de linux)
+ de linux) -> cuento con todos los conocimientos y recursos necesarios para completar este punto pero hasta no solucionar esto no va a ser posible
 
 
