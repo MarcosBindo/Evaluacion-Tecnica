@@ -33,11 +33,4 @@ public class Pregunta {
             }
         }
     }
-
-    public void mostrarRespuestas() {
-        for (int i = 0; i < respuestas.size(); i++) {
-            System.out.println("-" + respuestas.get(i) + "/n");
-        }
-    }
-
 }

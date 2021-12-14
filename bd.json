@@ -1,8 +1,1 @@
-{
-    "Encuestas": {
-        "1": {
-            "Nombre": "Encuesta de prueba 1",
-            "Fecha de vencimiento": 2022-04-15
-        }
-    }
-}
+{"Encuestas":{"1":{"Nombre":"Encuesta de prueba 1","Etiqueta":"etiqueta","Preguntas":{"Pregunta 1":{"Opciones":["opcion 1","opcion 2","opcion 3","opcion 4"]}},"Fecha de vencimiento":"2022-04-15"},"2":{"Nombre":"Encuesta de prueba 2","Etiqueta":"prueba1","Preguntas":{"Pregunta 2":{"Opciones":["opcion 1","opcion 2","opcion 3"]}},"Fecha de vencimiento":"2022-04-15"},"3":{"Nombre":"Encuesta de prueba 3","Etiqueta":"null","Preguntas":{},"Fecha de vencimiento":"2022-03-03"}}}

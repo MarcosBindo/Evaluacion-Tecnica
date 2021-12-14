@@ -14,18 +14,35 @@ public class Encuesta {
     private static final AtomicInteger count = new AtomicInteger();
     private int nEncuesta;
     private String nombre;
+    private String etiqueta;
     private ArrayList<Pregunta> preguntas;
     private Date fecha_vencimiento;
 
-    public Encuesta(String nombre, Date fecha_vencimiento) {
-        this.fecha_vencimiento = fecha_vencimiento;
-        this.nombre = nombre;
+    // Encuesta con etiqueta ingresada por parametro
+    public Encuesta(String nombre, String etiqueta, Date fecha_vencimiento) {
         nEncuesta = count.incrementAndGet();
+        this.nombre = nombre;
+        this.fecha_vencimiento = fecha_vencimiento;
+        this.etiqueta = etiqueta;
         this.preguntas = new ArrayList<Pregunta>();
     }
 
-    public void agregarPregunta(Pregunta pregunta){
+    // Encuesta sin etiqueta
+    public Encuesta(String nombre, Date fecha_vencimiento) {
+        nEncuesta = count.incrementAndGet();
+        this.nombre = nombre;
+        this.etiqueta = "null"; // Le inserta el string 'null' por default para facilitar el proceso de filtrado
+        this.fecha_vencimiento = fecha_vencimiento;
+        this.preguntas = new ArrayList<Pregunta>();
+    }
+
+    public void agregarPregunta(Pregunta pregunta) {
         this.preguntas.add(pregunta);
+    }
+
+    public void setFecha_vencimiento(String fecha_ven) {
+        Date date = Date.valueOf(fecha_ven);
+        this.fecha_vencimiento = date;
     }
 
 }
