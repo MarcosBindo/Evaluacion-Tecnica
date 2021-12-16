@@ -53,8 +53,10 @@ y modificar el main.
 ```bash
 java -jar .\nubi-0.0.1-SNAPSHOT.war
 ```
-### 2-Segundo Metodo
-(Una vez este dockerizado completo esta parte)
+### 2-Segundo Metodo (Docker)
+```Docker
+docker run -p <Puerto> marcosbindo/test-dockerizacion:latest
+```
 
 
 # :stop_sign: Que fue lo mas desafiante?
@@ -62,9 +64,5 @@ java -jar .\nubi-0.0.1-SNAPSHOT.war
 ### Cosas que no pude realizar:
 - Como dueño de producto, me gustaría que mi aplicación de encuestas posea un login para usuarios.
 - Como dueño de producto, me gustaría poder revisar un historial de preguntas por usuario
-
-### Cosas que estan frenadas: 
- - Estoy realizando pruebas para correr la imagen de docker que ya se encuentra subida en docker hub
- - Link: https://hub.docker.com/repository/docker/marcosbindo/evaluacion-tecnica
 
 
