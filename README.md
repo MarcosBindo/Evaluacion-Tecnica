@@ -64,7 +64,7 @@ java -jar .\nubi-0.0.1-SNAPSHOT.war
 - Como dueño de producto, me gustaría poder revisar un historial de preguntas por usuario
 
 ### Cosas que estan frenadas: 
- - Debe estar dockerizado (Esto es debido a que la maquina virtual que estaba utilizando no estaba corriendo, intente en mi windows pero tambien habia errores gracias al kernel
- de linux) -> cuento con todos los conocimientos y recursos necesarios para completar este punto pero hasta no solucionar esto no va a ser posible
+ - Estoy realizando pruebas para correr la imagen de docker que ya se encuentra subida en docker hub
+ - Link: https://hub.docker.com/repository/docker/marcosbindo/evaluacion-tecnica
 
 
